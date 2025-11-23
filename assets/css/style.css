@@ -165,6 +165,41 @@ body.light-mode .button:hover {
   filter: none;
 }
 
+/* LOADING SCREEN */
+
+#loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--bg-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.5s, visibility 0.5s;
+}
+
+#loading-screen.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loader {
+  width: 50px;
+  height: 50px;
+  border: 5px solid var(--third-color);
+  border-top: 5px solid var(--primary-color);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
 /* SOCIAL LINKS */
 
 .social-links {
@@ -420,6 +455,18 @@ body.menu-expanded button path {
 
   display: flex;
   align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+#particles-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: auto;
 }
 
 #home .wrapper {
@@ -432,6 +479,7 @@ body.menu-expanded button path {
   gap: 6rem;
 
   position: relative;
+  z-index: 2;
 }
 
 #home h1 {
@@ -609,6 +657,121 @@ body.menu-expanded button path {
   box-shadow: 0 0 2rem black;
 
   transition: 600ms;
+  filter: grayscale(30%) brightness(0.9);
+}
+
+#about img:hover {
+  filter: grayscale(0%) brightness(1);
+}
+
+/*===== EXPERIENCE TIMELINE =================================================*/
+
+#experience {
+  background-color: var(--bg-color);
+}
+
+#experience header {
+  margin-bottom: 6rem;
+}
+
+#experience .timeline {
+  position: relative;
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+#experience .timeline::before {
+  content: '';
+  position: absolute;
+  left: 2rem;
+  top: 0;
+  bottom: 0;
+  width: 0.3rem;
+  background: var(--primary-color);
+}
+
+#experience .timeline-item {
+  position: relative;
+  padding-left: 6rem;
+  margin-bottom: 4rem;
+}
+
+#experience .timeline-dot {
+  position: absolute;
+  left: 1.1rem;
+  top: 0.5rem;
+  width: 1.8rem;
+  height: 1.8rem;
+  background: var(--primary-color);
+  border: 0.4rem solid var(--bg-color);
+  border-radius: 50%;
+  box-shadow: 0 0 0 0.3rem var(--primary-color);
+  z-index: 1;
+}
+
+#experience .timeline-content {
+  background: var(--secundary-color);
+  padding: 2.5rem;
+  border-radius: 1rem;
+  box-shadow: -0.5rem 0.5rem 2rem rgba(0, 0, 0, 0.2);
+  transition: transform 400ms, box-shadow 400ms;
+  text-align: left;
+}
+
+#experience .timeline-content:hover {
+  transform: translateX(1rem);
+  box-shadow: 0 1rem 2.5rem rgba(0, 123, 255, 0.2);
+}
+
+#experience .timeline-date {
+  display: inline-block;
+  padding: 0.5rem 1.2rem;
+  background: var(--primary-color);
+  color: #fff;
+  border-radius: 2rem;
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+#experience .timeline-content h3 {
+  font-size: 2.2rem;
+  color: var(--headline);
+  margin-bottom: 0.5rem;
+}
+
+#experience .timeline-content h4 {
+  font-size: 1.6rem;
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+  font-weight: normal;
+}
+
+#experience .timeline-content p {
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+#experience .tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+#experience .tech-tag {
+  display: inline-block;
+  padding: 0.5rem 1.2rem;
+  background: var(--third-color);
+  color: var(--paragraph);
+  border-radius: 0.5rem;
+  font-size: 1.3rem;
+  font-weight: 500;
+  transition: background 300ms;
+}
+
+#experience .tech-tag:hover {
+  background: var(--primary-color);
+  color: #fff;
 }
 
 /*===== PROJECTS ===============================================*/
@@ -623,40 +786,6 @@ body.menu-expanded button path {
 
 #projects header h2 {
   margin-bottom: 1.6rem;
-}
-
-#projects header p {
-  max-width: 60rem;
-  margin: 0 auto 3rem;
-  text-align: center;
-}
-
-#projects header p a {
-  color: var(--paragraph);
-  font-weight: bold;
-  font-style: italic;
-}
-
-#projects header p + a {
-  padding: 0.8rem 2rem;
-  color: var(--paragraph);
-
-  background-color: var(--third-color);
-  border-radius: 0.8rem;
-
-  display: inline-flex;
-  justify-content: center;
-  gap: 1rem;
-
-  transition: 300ms;
-}
-
-#projects header a svg path:nth-child(2) {
-  fill: var(--headline);
-}
-
-#projects header a:hover {
-  filter: brightness(0.7);
 }
 
 #projects .cards {
@@ -790,11 +919,13 @@ body.menu-expanded button path {
   border-radius: 0.6rem;
   box-shadow: -1rem 1rem 1rem rgba(0, 0, 0, 0.267);
 
-  transition: 400ms;
+  transition: all 400ms;
 }
 
 #knowledge .card:hover {
   background: var(--third-color);
+  transform: translateY(-0.5rem);
+  box-shadow: 0 1rem 2rem rgba(0, 123, 255, 0.2);
 }
 
 #knowledge .card h3 {
@@ -803,6 +934,122 @@ body.menu-expanded button path {
 
 #knowledge .card img {
   width: 10rem;
+}
+
+/*===== TESTIMONIALS ===============================================*/
+
+#testimonials {
+  background-color: var(--secundary-color);
+}
+
+#testimonials header {
+  margin-bottom: 6rem;
+  text-align: center;
+}
+
+#testimonials header p {
+  margin-top: 1rem;
+  font-size: 1.8rem;
+}
+
+#testimonials .testimonials-slider {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 3rem;
+  margin-bottom: 6rem;
+}
+
+#testimonials .testimonial-card {
+  background: var(--bg-color);
+  padding: 3rem;
+  border-radius: 1rem;
+  box-shadow: -0.5rem 0.5rem 2rem rgba(0, 0, 0, 0.2);
+  transition: transform 400ms, box-shadow 400ms;
+  text-align: left;
+}
+
+#testimonials .testimonial-card:hover {
+  transform: translateY(-1rem);
+  box-shadow: 0 1rem 2.5rem rgba(0, 123, 255, 0.3);
+}
+
+#testimonials .quote-icon {
+  margin-bottom: 2rem;
+  opacity: 0.3;
+}
+
+#testimonials .testimonial-text {
+  font-size: 1.6rem;
+  line-height: 1.8;
+  color: var(--paragraph);
+  margin-bottom: 2rem;
+  font-style: italic;
+}
+
+#testimonials .testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding-top: 2rem;
+  border-top: 0.1rem solid var(--third-color);
+}
+
+#testimonials .author-info h4 {
+  font-size: 1.7rem;
+  color: var(--headline);
+  margin-bottom: 0.5rem;
+}
+
+#testimonials .author-info span {
+  font-size: 1.4rem;
+  color: var(--primary-color);
+}
+
+#testimonials .certifications {
+  margin-top: 6rem;
+}
+
+#testimonials .certifications h3 {
+  text-align: center;
+  font-size: 3rem;
+  color: var(--primary-color);
+  margin-bottom: 4rem;
+}
+
+#testimonials .cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 2.5rem;
+}
+
+#testimonials .cert-item {
+  background: var(--bg-color);
+  padding: 2.5rem;
+  border-radius: 1rem;
+  text-align: center;
+  box-shadow: -0.5rem 0.5rem 1.5rem rgba(0, 0, 0, 0.2);
+  transition: all 400ms;
+}
+
+#testimonials .cert-item:hover {
+  transform: translateY(-0.5rem) scale(1.02);
+  box-shadow: 0 1rem 2rem rgba(0, 123, 255, 0.2);
+}
+
+#testimonials .cert-item i {
+  margin-bottom: 1.5rem;
+}
+
+#testimonials .cert-item p {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: var(--headline);
+  margin-bottom: 0.8rem;
+}
+
+#testimonials .cert-item span {
+  font-size: 1.4rem;
+  color: var(--paragraph);
 }
 
 /*===== CONTACT ===============================================*/
@@ -1012,7 +1259,7 @@ footer .social-links li:nth-child(4) svg path:nth-child(2) {
   transform: translateY(0);
 }
 
-/*===== RESPONSIVO (DESKTOP) ====================================*/
+  /*===== RESPONSIVO (DESKTOP) ====================================*/
 
 @media (min-width: 1024px) {
   /*===== GERAL =======================================*/
@@ -1294,6 +1541,45 @@ footer .social-links li:nth-child(4) svg path:nth-child(2) {
 
   #about img:hover {
     scale: 1.07;
+  }
+
+  /*===== STATS =======================================*/
+  
+  #stats .stats-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  /*===== EXPERIENCE ==================================*/
+  
+  #experience .timeline::before {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  #experience .timeline-item {
+    width: 50%;
+    padding-left: 0;
+    padding-right: 4rem;
+  }
+  
+  #experience .timeline-item:nth-child(even) {
+    margin-left: 50%;
+    padding-left: 4rem;
+    padding-right: 0;
+  }
+  
+  #experience .timeline-dot {
+    left: auto;
+    right: -0.9rem;
+  }
+  
+  #experience .timeline-item:nth-child(even) .timeline-dot {
+    right: auto;
+    left: -0.9rem;
+  }
+  
+  #experience .timeline-content:hover {
+    transform: translateX(0) scale(1.02);
   }
 
   /*===== PROJECTS ====================================*/
