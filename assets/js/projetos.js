@@ -35,7 +35,7 @@ function projetos(section) {
           <p>HTML - CSS - JavaScript - NodeJS - MySQL</p>
         </div>
         <div class="card">
-          <h3>NetworkUp</h3>
+          <h3>NetworkUp - Projeto de conclusão de curso</h3>
           <div class="img-wrapper">
             <img
               src="./assets/images/projects/networkup.png"
