@@ -522,6 +522,7 @@ body.menu-expanded button path {
   height: 100vh;
   min-height: calc(60rem + var(--nav-height));
   padding-block: 0;
+  padding-top: var(--nav-height);
 
   background-color: var(--secundary-color);
 
