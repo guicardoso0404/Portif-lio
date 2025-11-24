@@ -6,8 +6,11 @@ class ParticleSystem {
     
     this.ctx = this.canvas.getContext('2d');
     this.particles = [];
-    this.particleCount = 50;
-    this.mouse = { x: null, y: null, radius: 150 };
+    
+    // Adjust particle count based on screen size
+    const isMobile = window.innerWidth <= 768;
+    this.particleCount = isMobile ? 25 : 50;
+    this.mouse = { x: null, y: null, radius: isMobile ? 100 : 150 };
     
     this.init();
   }
@@ -17,15 +20,33 @@ class ParticleSystem {
     this.createParticles();
     this.animate();
     
-    window.addEventListener('resize', () => this.resizeCanvas());
+    window.addEventListener('resize', () => {
+      this.resizeCanvas();
+      // Recreate particles on resize for better responsiveness
+      this.createParticles();
+    });
     
+    // Support both mouse and touch events
     this.canvas.addEventListener('mousemove', (e) => {
       const rect = this.canvas.getBoundingClientRect();
       this.mouse.x = e.clientX - rect.left;
       this.mouse.y = e.clientY - rect.top;
     });
     
+    this.canvas.addEventListener('touchmove', (e) => {
+      e.preventDefault();
+      const rect = this.canvas.getBoundingClientRect();
+      const touch = e.touches[0];
+      this.mouse.x = touch.clientX - rect.left;
+      this.mouse.y = touch.clientY - rect.top;
+    });
+    
     this.canvas.addEventListener('mouseleave', () => {
+      this.mouse.x = null;
+      this.mouse.y = null;
+    });
+    
+    this.canvas.addEventListener('touchend', () => {
       this.mouse.x = null;
       this.mouse.y = null;
     });
@@ -131,11 +152,10 @@ class ParticleSystem {
 // Initialize on load
 export function initParticles() {
   try {
-    if (window.innerWidth > 768) {
-      const canvas = document.getElementById('particles-canvas');
-      if (canvas) {
-        new ParticleSystem('particles-canvas');
-      }
+    // Enable particles on all screen sizes
+    const canvas = document.getElementById('particles-canvas');
+    if (canvas) {
+      new ParticleSystem('particles-canvas');
     }
   } catch (error) {
     console.log('Particles disabled');

@@ -1668,6 +1668,52 @@ footer .social-links li:nth-child(4) svg path:nth-child(2) {
   }
 }
 
+/*===== TABLET & MEDIUM SCREENS ==================================*/
+@media (max-width: 768px) {
+  #home {
+    padding-top: 8rem;
+  }
+  
+  #home h1 {
+    font-size: 4.2rem;
+  }
+  
+  #home .computer-wrapper {
+    max-width: 35rem;
+  }
+  
+  #about .wrapper {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  
+  #about img {
+    margin: 0 auto;
+    max-width: 35rem;
+  }
+  
+  #experience .timeline-item {
+    padding-left: 5rem;
+  }
+  
+  #experience .timeline-content h3 {
+    font-size: 2rem;
+  }
+  
+  #experience .timeline-content h4 {
+    font-size: 1.5rem;
+  }
+  
+  #projects .cards {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  
+  #knowledge .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 500px) {
   /*===== GERAL ==================================*/
 
@@ -1722,13 +1768,26 @@ footer .social-links li:nth-child(4) svg path:nth-child(2) {
   }
 
   /*===== HOME ==================================*/
+  
+  #particles-canvas {
+    opacity: 0.4;
+  }
 
   #home h1 {
-    font-size: 3.8rem;
+    font-size: 3.2rem;
   }
 
   #home p {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
+  }
+  
+  #home .computer-wrapper {
+    width: 100%;
+    max-width: 30rem;
+  }
+  
+  #home .tech-icon {
+    font-size: 2rem !important;
   }
 
   @keyframes typing {
@@ -1736,24 +1795,67 @@ footer .social-links li:nth-child(4) svg path:nth-child(2) {
       width: 0;
     }
     to {
-      width: 23.5rem;
+      width: 100%;
     }
   }
 
-  #home .wrapper::before {
-    bottom: -2rem;
-  }
-
   /*===== ABOUT ==================================*/
+  
+  #about img {
+    width: 100% !important;
+    max-width: 30rem !important;
+  }
 
   #about .content a:nth-child(2) {
     font-size: 1.4rem;
+  }
+  
+  /*===== EXPERIENCE ==================================*/
+  
+  #experience .timeline::before {
+    left: 1rem;
+  }
+  
+  #experience .timeline-item {
+    padding-left: 4rem;
+  }
+  
+  #experience .timeline-dot {
+    left: 0.2rem;
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  
+  #experience .timeline-content {
+    padding: 1.8rem;
+  }
+  
+  #experience .timeline-content h3 {
+    font-size: 1.8rem;
+  }
+  
+  #experience .timeline-content h4 {
+    font-size: 1.4rem;
+  }
+  
+  #experience .timeline-date {
+    font-size: 1.1rem;
+    padding: 0.4rem 1rem;
+  }
+  
+  #experience .tech-tags {
+    gap: 0.6rem;
+  }
+  
+  #experience .tech-tag {
+    font-size: 1.1rem;
+    padding: 0.4rem 0.9rem;
   }
 
   /*===== PROJECTS ==================================*/
 
   #projects .card {
-    padding: 2.5rem;
+    padding: 2rem;
   }
 
   #projects .card img {
@@ -1790,8 +1892,23 @@ footer .social-links li:nth-child(4) svg path:nth-child(2) {
   #home .wrapper::before {
     width: 24rem;
     height: 24rem;
-
     bottom: -0.5rem;
+  }
+  
+  #home h1 {
+    font-size: 3rem;
+  }
+  
+  #experience .timeline-item {
+    padding-left: 3.5rem;
+  }
+  
+  #experience .timeline-content {
+    padding: 1.5rem;
+  }
+  
+  #knowledge .cards {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -1807,16 +1924,15 @@ footer .social-links li:nth-child(4) svg path:nth-child(2) {
   #home .wrapper::before {
     width: 20rem;
     height: 20rem;
-
     bottom: 2rem;
   }
 
   #home h1 {
-    font-size: 3.2rem;
+    font-size: 2.8rem;
   }
 
   #home p {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
   }
 
   #home .line {
@@ -1828,7 +1944,7 @@ footer .social-links li:nth-child(4) svg path:nth-child(2) {
       width: 0;
     }
     to {
-      width: 18rem;
+      width: 100%;
     }
   }
 
@@ -1836,6 +1952,44 @@ footer .social-links li:nth-child(4) svg path:nth-child(2) {
 
   #about .content a:nth-child(2) {
     font-size: 1.2rem;
+  }
+  
+  /*===== EXPERIENCE ==================================*/
+  
+  #experience .timeline::before {
+    left: 0.8rem;
+  }
+  
+  #experience .timeline-item {
+    padding-left: 3rem;
+  }
+  
+  #experience .timeline-dot {
+    left: 0;
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+  
+  #experience .timeline-content {
+    padding: 1.3rem;
+  }
+  
+  #experience .timeline-content h3 {
+    font-size: 1.6rem;
+  }
+  
+  #experience .timeline-content h4 {
+    font-size: 1.2rem;
+  }
+  
+  #experience .timeline-date {
+    font-size: 1rem;
+    padding: 0.3rem 0.8rem;
+  }
+  
+  #experience .tech-tag {
+    font-size: 1rem;
+    padding: 0.3rem 0.7rem;
   }
 }
 
