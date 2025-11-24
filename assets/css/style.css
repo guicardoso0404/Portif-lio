@@ -1,5 +1,3 @@
-/*===== GERAL ===============================================*/
-
 * {
   margin: 0;
   padding: 0;
@@ -1671,7 +1669,15 @@ footer .social-links li:nth-child(4) svg path:nth-child(2) {
 /*===== TABLET & MEDIUM SCREENS ==================================*/
 @media (max-width: 768px) {
   #home {
-    padding-top: 8rem;
+    padding-top: 10rem;
+  }
+  
+  #home .wrapper {
+    gap: 5rem;
+  }
+  
+  #home h4 {
+    font-size: 1.6rem;
   }
   
   #home h1 {
@@ -1772,13 +1778,35 @@ footer .social-links li:nth-child(4) svg path:nth-child(2) {
   #particles-canvas {
     opacity: 0.4;
   }
+  
+  #home {
+    padding-top: 12rem;
+  }
+  
+  #home .wrapper {
+    height: auto;
+    min-height: calc(100vh - 12rem);
+    gap: 4rem;
+    padding: 2rem 0;
+  }
+  
+  #home .col-a {
+    text-align: center;
+    width: 100%;
+  }
+  
+  #home h4 {
+    font-size: 1.4rem;
+  }
 
   #home h1 {
     font-size: 3.2rem;
+    margin-bottom: 0.8rem;
   }
 
   #home p {
     font-size: 1.5rem;
+    margin-bottom: 2.5rem;
   }
   
   #home .computer-wrapper {
@@ -1789,14 +1817,14 @@ footer .social-links li:nth-child(4) svg path:nth-child(2) {
   #home .tech-icon {
     font-size: 2rem !important;
   }
-
-  @keyframes typing {
-    from {
-      width: 0;
-    }
-    to {
-      width: 100%;
-    }
+  
+  #home .line {
+    white-space: normal;
+    border-right: none;
+  }
+  
+  #home .typing {
+    animation: none;
   }
 
   /*===== ABOUT ==================================*/
@@ -1927,12 +1955,27 @@ footer .social-links li:nth-child(4) svg path:nth-child(2) {
     bottom: 2rem;
   }
 
+  #home {
+    padding-top: 10rem;
+  }
+  
+  #home .wrapper {
+    min-height: calc(100vh - 10rem);
+    gap: 3rem;
+  }
+  
+  #home h4 {
+    font-size: 1.3rem;
+  }
+  
   #home h1 {
     font-size: 2.8rem;
+    margin-bottom: 0.6rem;
   }
 
   #home p {
     font-size: 1.3rem;
+    margin-bottom: 2rem;
   }
 
   #home .line {
