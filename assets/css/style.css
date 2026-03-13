@@ -1333,7 +1333,7 @@ footer .social-links li:nth-child(4) svg path:nth-child(2) {
   transform: translateY(0);
 }
 
-  /*===== RESPONSIVO (DESKTOP) ====================================*/
+/*===== RESPONSIVO (DESKTOP) ====================================*/
 
 @media (min-width: 1024px) {
   /*===== GERAL =======================================*/
@@ -1404,7 +1404,8 @@ footer .social-links li:nth-child(4) svg path:nth-child(2) {
 
   nav#navigation .menu ul:nth-child(1) {
     display: flex;
-    gap: 1rem;
+    align-items: center;
+    gap: 2.5rem;
   }
 
   nav#navigation .menu ul li a {
@@ -1426,14 +1427,8 @@ footer .social-links li:nth-child(4) svg path:nth-child(2) {
   }
 
   nav#navigation .menu ul:nth-child(1) li {
-    width: 8.4rem;
+    width: auto;
     color: var(--paragraph);
-  }
-
-  nav#navigation .menu ul:nth-child(1) li:nth-child(3),
-  nav#navigation .menu ul:nth-child(1) li:nth-child(4),
-  nav#navigation .menu ul:nth-child(1) li:nth-child(5) {
-    width: 12rem;
   }
 
   nav#navigation .menu ul li a.active,
