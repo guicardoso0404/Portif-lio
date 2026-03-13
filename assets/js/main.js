@@ -40,6 +40,7 @@ function onScroll() {
   showBackToTopButtonOnScroll();
 
   activateMenuAtCurrentSection(about);
+  activateMenuAtCurrentSection(experience);
   activateMenuAtCurrentSection(projects);
   activateMenuAtCurrentSection(knowledge);
   activateMenuAtCurrentSection(contact);
