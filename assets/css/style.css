@@ -660,16 +660,22 @@ body.menu-expanded button path {
   animation-delay: 1.2s;
 }
 
+#home .java-icon {
+  color: #F89820;
+  left: 52%;
+  animation-delay: 1.8s;
+}
+
 #home .react-icon {
   color: #61DAFB;
   left: 55%;
-  animation-delay: 1.8s;
+  animation-delay: 2.2s;
 }
 
 #home .db-icon {
   color: #4479A1;
   left: 48%;
-  animation-delay: 2.4s;
+  animation-delay: 2.6s;
 }
 
 @keyframes flyOut {
