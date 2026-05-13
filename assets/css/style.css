@@ -102,6 +102,10 @@ section h4 {
   margin-bottom: 1.6rem;
 }
 
+section h4 a {
+  color: #0000EE;
+}
+
 section header h2 {
   font-size: 3rem;
   line-height: 3.9rem;
