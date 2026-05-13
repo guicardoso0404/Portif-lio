@@ -103,7 +103,7 @@ section h4 {
 }
 
 section h4 a {
-  color: #0000EE;
+  color: var(--primary-color);
 }
 
 section header h2 {
