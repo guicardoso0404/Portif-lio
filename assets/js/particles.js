@@ -5,56 +5,77 @@ class ParticleSystem {
     if (!this.canvas) return;
     
     this.ctx = this.canvas.getContext('2d');
+    this.container = this.canvas.closest('#home') || this.canvas.parentElement || this.canvas;
     this.particles = [];
-    
-    // Adjust particle count based on screen size
-    const isMobile = window.innerWidth <= 768;
-    this.particleCount = isMobile ? 25 : 50;
-    this.mouse = { x: null, y: null, radius: isMobile ? 100 : 150 };
+    this.particleCount = 0;
+    this.connectionDistance = 120;
+    this.mouse = { x: null, y: null, radius: 150 };
     
     this.init();
   }
   
   init() {
     this.resizeCanvas();
+    this.updateResponsiveSettings();
     this.createParticles();
     this.animate();
     
     window.addEventListener('resize', () => {
       this.resizeCanvas();
+      this.updateResponsiveSettings();
       // Recreate particles on resize for better responsiveness
       this.createParticles();
     });
     
-    // Support both mouse and touch events
-    this.canvas.addEventListener('mousemove', (e) => {
-      const rect = this.canvas.getBoundingClientRect();
-      this.mouse.x = e.clientX - rect.left;
-      this.mouse.y = e.clientY - rect.top;
+    this.container.addEventListener('mousemove', (e) => {
+      this.setMousePosition(e.clientX, e.clientY);
     });
     
-    this.canvas.addEventListener('touchmove', (e) => {
-      e.preventDefault();
-      const rect = this.canvas.getBoundingClientRect();
+    this.container.addEventListener('touchmove', (e) => {
       const touch = e.touches[0];
-      this.mouse.x = touch.clientX - rect.left;
-      this.mouse.y = touch.clientY - rect.top;
+      if (touch) {
+        this.setMousePosition(touch.clientX, touch.clientY);
+      }
+    }, { passive: true });
+    
+    this.container.addEventListener('mouseleave', () => {
+      this.resetMousePosition();
     });
     
-    this.canvas.addEventListener('mouseleave', () => {
-      this.mouse.x = null;
-      this.mouse.y = null;
-    });
-    
-    this.canvas.addEventListener('touchend', () => {
-      this.mouse.x = null;
-      this.mouse.y = null;
+    this.container.addEventListener('touchend', () => {
+      this.resetMousePosition();
     });
   }
   
   resizeCanvas() {
     this.canvas.width = this.canvas.offsetWidth;
     this.canvas.height = this.canvas.offsetHeight;
+  }
+
+  updateResponsiveSettings() {
+    const isMobile = window.innerWidth <= 768;
+    const area = this.canvas.width * this.canvas.height;
+    const density = isMobile ? 8500 : 18000;
+    const minParticles = isMobile ? 36 : 75;
+    const maxParticles = isMobile ? 58 : 115;
+
+    this.particleCount = Math.min(
+      maxParticles,
+      Math.max(minParticles, Math.round(area / density))
+    );
+    this.mouse.radius = isMobile ? 130 : 230;
+    this.connectionDistance = isMobile ? 105 : 135;
+  }
+
+  setMousePosition(clientX, clientY) {
+    const rect = this.canvas.getBoundingClientRect();
+    this.mouse.x = clientX - rect.left;
+    this.mouse.y = clientY - rect.top;
+  }
+
+  resetMousePosition() {
+    this.mouse.x = null;
+    this.mouse.y = null;
   }
   
   createParticles() {
@@ -94,8 +115,8 @@ class ParticleSystem {
         const dy = p.y - p2.y;
         const distance = Math.sqrt(dx * dx + dy * dy);
         
-        if (distance < 120) {
-          this.ctx.strokeStyle = `rgba(0, 123, 255, ${1 - distance / 120})`;
+        if (distance < this.connectionDistance) {
+          this.ctx.strokeStyle = `rgba(0, 123, 255, ${1 - distance / this.connectionDistance})`;
           this.ctx.lineWidth = 0.5;
           this.ctx.beginPath();
           this.ctx.moveTo(p.x, p.y);
@@ -116,7 +137,7 @@ class ParticleSystem {
         const dy = this.mouse.y - p.y;
         const distance = Math.sqrt(dx * dx + dy * dy);
         
-        if (distance < this.mouse.radius) {
+        if (distance > 0 && distance < this.mouse.radius) {
           const force = (this.mouse.radius - distance) / this.mouse.radius;
           const directionX = dx / distance;
           const directionY = dy / distance;
