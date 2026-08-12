@@ -1,5 +1,6 @@
 import { projetos } from "./projetos.js";
 import { initParticles } from "./particles.js";
+import "./i18n.js";
 
 // Hide loading screen immediately
 document.addEventListener("DOMContentLoaded", () => {
