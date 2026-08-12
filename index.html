@@ -1,693 +1,524 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    
-    <!-- Cache Control -->
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate, max-age=0, proxy-revalidate" />
-    <meta http-equiv="Pragma" content="no-cache" />
-    <meta http-equiv="Expires" content="0" />
-    <meta http-equiv="cache-control" content="max-age=0" />
-    
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Guilherme Cardoso - Desenvolvedor Full Stack especializado em React, Node.js e MySQL. Criando soluções web modernas e eficientes." />
-    <meta name="author" content="Guilherme Cardoso" />
-    <meta name="keywords" content="desenvolvedor full stack, programador web, React, Node.js, JavaScript, MySQL, frontend, backend, portfolio desenvolvedor, Guilherme Cardoso, desenvolvimento web" />
-    <meta name="robots" content="index, follow" />
-    <meta name="theme-color" content="#007bff" />
-    
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Guilherme Cardoso - Desenvolvedor Full Stack" />
-    <meta property="og:description" content="Desenvolvedor web Full Stack especializado em criar experiências digitais incríveis com React, Node.js e MySQL." />
-    <meta property="og:image" content="./assets/images/eu.jpg" />
-    <meta property="og:url" content="https://portif-lio-drab-ten.vercel.app/" />
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Guilherme Cardoso Portfolio" />
-    
-    <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Guilherme Cardoso - Desenvolvedor Full Stack" />
-    <meta name="twitter:description" content="Desenvolvedor web Full Stack criando soluções modernas e eficientes." />
-    <meta name="twitter:image" content="./assets/images/eu.jpg" />
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans&family=Gemunu+Libre:wght@200&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <link
-      rel="shortcut icon"
-      href="./assets/icons/favicon.ico"
-      type="image/x-icon"
-    />
-    <link rel="stylesheet" href="./assets/css/style.css?v=1.0.0" />
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <script type="module" src="./assets/js/main.js?v=1.0.0" defer></script>
-    <!-- Vercel Web Analytics -->
-    <script>
-      window.va =
-        window.va ||
-        function () {
-          (window.vaq = window.vaq || []).push(arguments)
-        }
-    </script>
-    <script defer src="/_vercel/insights/script.js"></script>
-    
-    <!-- Preload critical resources -->
-    <link rel="preload" href="./assets/css/style.css?v=1.0.0" as="style">
-    <link rel="preload" href="./assets/js/main.js?v=1.0.0" as="script">
+  <!-- Cache Control -->
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate, max-age=0, proxy-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+  <meta http-equiv="cache-control" content="max-age=0" />
 
-    <title>Guilherme Cardoso - Desenvolvedor Full Stack | Portfolio</title>
-  </head>
-  <body>
-    <!-- Loading Screen -->
-    <div id="loading-screen" aria-label="Carregando página">
-      <div class="loader"></div>
-    </div>
-    
-    <nav id="navigation" role="navigation" aria-label="Menu principal">
-      <div class="wrapper">
-        <a class="logo close" href="#home"> Guilherme </a>
+  <!-- SEO Meta Tags -->
+  <meta name="description"
+    content="Guilherme Cardoso - Desenvolvedor Full Stack especializado em React, Node.js e MySQL. Criando soluções web modernas e eficientes." />
+  <meta name="author" content="Guilherme Cardoso" />
+  <meta name="keywords"
+    content="desenvolvedor full stack, programador web, React, Node.js, JavaScript, MySQL, frontend, backend, portfolio desenvolvedor, Guilherme Cardoso, desenvolvimento web" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#007bff" />
 
-        <div class="menu">
-          <ul>
-            <li>
-              <a id="aboutNav" class="close" href="#about">Sobre mim</a>
-            </li>
-            <li>
-              <a id="experienceNav" class="close" href="#experience">Experiência</a>
-            </li>
-            <li>
-              <a id="projectsNav" class="close" href="#projects">Projetos</a>
-            </li>
-            <li>
-              <a id="knowledgeNav" class="close" href="#knowledge"
-                >Conhecimentos</a
-              >
-            </li>
-            <li>
-              <a id="contactNav" class="close" href="#contact">Fale comigo</a>
-            </li>
-          </ul>
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Guilherme Cardoso - Desenvolvedor Full Stack" />
+  <meta property="og:description"
+    content="Desenvolvedor web Full Stack especializado em criar experiências digitais incríveis com React, Node.js e MySQL." />
+  <meta property="og:image" content="./assets/images/eu.jpg" />
+  <meta property="og:url" content="https://portif-lio-drab-ten.vercel.app/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Guilherme Cardoso Portfolio" />
 
-          <ul class="social-links">
-            <li>
-              <a
-                href="https://www.instagram.com/guilhermecardoso____/"
-                title="Instagram"
-                target="_blank"
-                ><svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M17 1.99997H7C4.23858 1.99997 2 4.23855 2 6.99997V17C2 19.7614 4.23858 22 7 22H17C19.7614 22 22 19.7614 22 17V6.99997C22 4.23855 19.7614 1.99997 17 1.99997Z"
-                    stroke="#FFFAF1"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M15.9997 11.3701C16.1231 12.2023 15.981 13.0523 15.5935 13.7991C15.206 14.5459 14.5929 15.1515 13.8413 15.5297C13.0898 15.908 12.2382 16.0397 11.4075 15.906C10.5768 15.7723 9.80947 15.3801 9.21455 14.7852C8.61962 14.1903 8.22744 13.4229 8.09377 12.5923C7.96011 11.7616 8.09177 10.91 8.47003 10.1584C8.84829 9.40691 9.45389 8.7938 10.2007 8.4063C10.9475 8.0188 11.7975 7.87665 12.6297 8.00006C13.4786 8.12594 14.2646 8.52152 14.8714 9.12836C15.4782 9.73521 15.8738 10.5211 15.9997 11.3701Z"
-                    stroke="#FFFAF1"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M17.5 6.49997H17.51"
-                    stroke="#FFFAF1"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://github.com/guicardoso0404"
-                title="Github"
-                target="_blank"
-                ><svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  width="24"
-                  height="24"
-                >
-                  <path fill="none" d="M0 0h24v24H0z" />
-                  <path
-                    d="M12 2C6.475 2 2 6.475 2 12a9.994 9.994 0 0 0 6.838 9.488c.5.087.687-.213.687-.476 0-.237-.013-1.024-.013-1.862-2.512.463-3.162-.612-3.362-1.175-.113-.288-.6-1.175-1.025-1.413-.35-.187-.85-.65-.013-.662.788-.013 1.35.725 1.538 1.025.9 1.512 2.338 1.087 2.912.825.088-.65.35-1.087.638-1.337-2.225-.25-4.55-1.113-4.55-4.938 0-1.088.387-1.987 1.025-2.688-.1-.25-.45-1.275.1-2.65 0 0 .837-.262 2.75 1.026a9.28 9.28 0 0 1 2.5-.338c.85 0 1.7.112 2.5.337 1.912-1.3 2.75-1.024 2.75-1.024.55 1.375.2 2.4.1 2.65.637.7 1.025 1.587 1.025 2.687 0 3.838-2.337 4.688-4.562 4.938.362.312.675.912.675 1.85 0 1.337-.013 2.412-.013 2.75 0 .262.188.574.688.474A10.016 10.016 0 0 0 22 12c0-5.525-4.475-10-10-10z"
-                    fill="rgba(255,255,255,1)"
-                  />
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.linkedin.com/in/guilherme-cardoso-39429328a/"
-                title="LinkedIn"
-                target="_blank"
-                ><svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  width="24"
-                  height="24"
-                >
-                  <path fill="none" d="M0 0h24v24H0z" />
-                  <path
-                    d="M6.94 5a2 2 0 1 1-4-.002 2 2 0 0 1 4 .002zM7 8.48H3V21h4V8.48zm6.32 0H9.34V21h3.94v-6.57c0-3.66 4.77-4 4.77 0V21H22v-7.93c0-6.17-7.06-5.94-8.72-2.91l.04-1.68z"
-                    fill="rgba(255,255,255,1)"
-                  />
-                </svg>
-              </a>
-            </li>
-            <li style="display:none;">
-              <a
-                href="#"
-                title="Twitter"
-                target="_blank"
-                ><svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  width="24"
-                  height="24"
-                >
-                  <path fill="none" d="M0 0h24v24H0z" />
-                  <path
-                    d="M22.162 5.656a8.384 8.384 0 0 1-2.402.658A4.196 4.196 0 0 0 21.6 4c-.82.488-1.719.83-2.656 1.015a4.182 4.182 0 0 0-7.126 3.814 11.874 11.874 0 0 1-8.62-4.37a4.168 4.168 0 0 0-.566 2.103c0 1.45.738 2.731 1.86 3.481a4.168 4.168 0 0 1-1.894-.523v.052a4.185 4.185 0 0 0 3.355 4.101 4.21 4.21 0 0 1-1.89.072A4.185 4.185 0 0 0 7.97 16.65a8.394 8.394 0 0 1-6.191 1.732 11.83 11.83 0 0 0 6.41 1.88c7.693 0 11.9-6.373 11.9-11.9 0-.18-.005-.362-.013-.54a8.496 8.496 0 0 0 2.087-2.165z"
-                    fill="rgba(255,255,255,1)"
-                  />
-                </svg>
-              </a>
-            </li>
-          </ul>
-        </div>
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Guilherme Cardoso - Desenvolvedor Full Stack" />
+  <meta name="twitter:description" content="Desenvolvedor web Full Stack criando soluções modernas e eficientes." />
+  <meta name="twitter:image" content="./assets/images/eu.jpg" />
 
-        <button
-          aria-expanded="false"
-          aria-label="Abrir menu"
-          class="open-menu open"
-        >
-          <svg
-            width="40"
-            height="40"
-            viewBox="0 0 40 40"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M10 20H30"
-              stroke="#00856F"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-            <path
-              d="M10 12H30"
-              stroke="#00856F"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-            <path
-              d="M18 28L30 28"
-              stroke="#00856F"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </svg>
-        </button>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans&family=Gemunu+Libre:wght@200&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 
-        <button
-          aria-expanded="true"
-          aria-label="Fechar menu"
-          class="close-menu close"
-        >
-          <svg
-            width="40"
-            height="40"
-            viewBox="0 0 40 40"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M30 10L10 30M10 10L30 30"
-              stroke="#FFFAF1"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </svg>
-        </button>
+  <link rel="shortcut icon" href="./assets/icons/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="./assets/css/style.css?v=1.0.0" />
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script type="module" src="./assets/js/main.js?v=1.0.0" defer></script>
+  <!-- Vercel Web Analytics -->
+  <script>
+    window.va =
+      window.va ||
+      function () {
+        (window.vaq = window.vaq || []).push(arguments)
+      }
+  </script>
+  <script defer src="/_vercel/insights/script.js"></script>
+
+  <!-- Preload critical resources -->
+  <link rel="preload" href="./assets/css/style.css?v=1.0.0" as="style">
+  <link rel="preload" href="./assets/js/main.js?v=1.0.0" as="script">
+
+  <title>Guilherme Cardoso - Desenvolvedor Full Stack | Portfolio</title>
+</head>
+
+<body>
+  <!-- Loading Screen -->
+  <div id="loading-screen" aria-label="Carregando página">
+    <div class="loader"></div>
+  </div>
+
+  <nav id="navigation" role="navigation" aria-label="Menu principal">
+    <div class="wrapper">
+      <a class="logo close" href="#home"> Guilherme </a>
+
+      <div class="menu">
+        <ul>
+          <li>
+            <a id="aboutNav" class="close" href="#about">Sobre mim</a>
+          </li>
+          <li>
+            <a id="experienceNav" class="close" href="#experience">Experiência</a>
+          </li>
+          <li>
+            <a id="projectsNav" class="close" href="#projects">Projetos</a>
+          </li>
+          <li>
+            <a id="knowledgeNav" class="close" href="#knowledge">Conhecimentos</a>
+          </li>
+          <li>
+            <a id="contactNav" class="close" href="#contact">Fale comigo</a>
+          </li>
+        </ul>
+
+        <ul class="social-links">
+          <li>
+            <a href="https://www.instagram.com/guilhermecardoso____/" title="Instagram" target="_blank"><svg width="24"
+                height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M17 1.99997H7C4.23858 1.99997 2 4.23855 2 6.99997V17C2 19.7614 4.23858 22 7 22H17C19.7614 22 22 19.7614 22 17V6.99997C22 4.23855 19.7614 1.99997 17 1.99997Z"
+                  stroke="#FFFAF1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path
+                  d="M15.9997 11.3701C16.1231 12.2023 15.981 13.0523 15.5935 13.7991C15.206 14.5459 14.5929 15.1515 13.8413 15.5297C13.0898 15.908 12.2382 16.0397 11.4075 15.906C10.5768 15.7723 9.80947 15.3801 9.21455 14.7852C8.61962 14.1903 8.22744 13.4229 8.09377 12.5923C7.96011 11.7616 8.09177 10.91 8.47003 10.1584C8.84829 9.40691 9.45389 8.7938 10.2007 8.4063C10.9475 8.0188 11.7975 7.87665 12.6297 8.00006C13.4786 8.12594 14.2646 8.52152 14.8714 9.12836C15.4782 9.73521 15.8738 10.5211 15.9997 11.3701Z"
+                  stroke="#FFFAF1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M17.5 6.49997H17.51" stroke="#FFFAF1" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/guicardoso0404" title="Github" target="_blank"><svg
+                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                <path fill="none" d="M0 0h24v24H0z" />
+                <path
+                  d="M12 2C6.475 2 2 6.475 2 12a9.994 9.994 0 0 0 6.838 9.488c.5.087.687-.213.687-.476 0-.237-.013-1.024-.013-1.862-2.512.463-3.162-.612-3.362-1.175-.113-.288-.6-1.175-1.025-1.413-.35-.187-.85-.65-.013-.662.788-.013 1.35.725 1.538 1.025.9 1.512 2.338 1.087 2.912.825.088-.65.35-1.087.638-1.337-2.225-.25-4.55-1.113-4.55-4.938 0-1.088.387-1.987 1.025-2.688-.1-.25-.45-1.275.1-2.65 0 0 .837-.262 2.75 1.026a9.28 9.28 0 0 1 2.5-.338c.85 0 1.7.112 2.5.337 1.912-1.3 2.75-1.024 2.75-1.024.55 1.375.2 2.4.1 2.65.637.7 1.025 1.587 1.025 2.687 0 3.838-2.337 4.688-4.562 4.938.362.312.675.912.675 1.85 0 1.337-.013 2.412-.013 2.75 0 .262.188.574.688.474A10.016 10.016 0 0 0 22 12c0-5.525-4.475-10-10-10z"
+                  fill="rgba(255,255,255,1)" />
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/guilherme-cardoso-39429328a/" title="LinkedIn" target="_blank"><svg
+                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                <path fill="none" d="M0 0h24v24H0z" />
+                <path
+                  d="M6.94 5a2 2 0 1 1-4-.002 2 2 0 0 1 4 .002zM7 8.48H3V21h4V8.48zm6.32 0H9.34V21h3.94v-6.57c0-3.66 4.77-4 4.77 0V21H22v-7.93c0-6.17-7.06-5.94-8.72-2.91l.04-1.68z"
+                  fill="rgba(255,255,255,1)" />
+              </svg>
+            </a>
+          </li>
+          <li style="display:none;">
+            <a href="#" title="Twitter" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                width="24" height="24">
+                <path fill="none" d="M0 0h24v24H0z" />
+                <path
+                  d="M22.162 5.656a8.384 8.384 0 0 1-2.402.658A4.196 4.196 0 0 0 21.6 4c-.82.488-1.719.83-2.656 1.015a4.182 4.182 0 0 0-7.126 3.814 11.874 11.874 0 0 1-8.62-4.37a4.168 4.168 0 0 0-.566 2.103c0 1.45.738 2.731 1.86 3.481a4.168 4.168 0 0 1-1.894-.523v.052a4.185 4.185 0 0 0 3.355 4.101 4.21 4.21 0 0 1-1.89.072A4.185 4.185 0 0 0 7.97 16.65a8.394 8.394 0 0 1-6.191 1.732 11.83 11.83 0 0 0 6.41 1.88c7.693 0 11.9-6.373 11.9-11.9 0-.18-.005-.362-.013-.54a8.496 8.496 0 0 0 2.087-2.165z"
+                  fill="rgba(255,255,255,1)" />
+              </svg>
+            </a>
+          </li>
+        </ul>
       </div>
-    </nav>
 
-    <section id="home">
-      <canvas id="particles-canvas" aria-hidden="true"></canvas>
-      <div class="wrapper">
-        <div class="col-a">
-          <header>
-            <h4>Hello world 👋</h4>
-            <h1>Eu sou Guilherme,</h1>
-          </header>
-          <div class="content">
-            <p class="line typing">Desenvolvedor Web Full Stack.</p>
-            <a class="button" href="#contact"> Fale comigo </a>
+      <button aria-expanded="false" aria-label="Abrir menu" class="open-menu open">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M10 20H30" stroke="#00856F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M10 12H30" stroke="#00856F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M18 28L30 28" stroke="#00856F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </button>
+
+      <button aria-expanded="true" aria-label="Fechar menu" class="close-menu close">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M30 10L10 30M10 10L30 30" stroke="#FFFAF1" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" />
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <section id="home">
+    <canvas id="particles-canvas" aria-hidden="true"></canvas>
+    <div class="wrapper">
+      <div class="col-a">
+        <header>
+          <h4>Hello world 👋</h4>
+          <h1>Eu sou Guilherme,</h1>
+        </header>
+        <div class="content">
+          <p class="line typing">Desenvolvedor Web Full Stack.</p>
+          <a class="button" href="#contact"> Fale comigo </a>
+        </div>
+      </div>
+
+      <div class="col-b">
+        <div class="computer-wrapper">
+          <img src="./assets/images/computador.png" alt="Computador com códigos" class="computer-img" />
+          <div class="tech-icons-flying">
+            <i class="bi bi-filetype-html tech-icon html-icon"></i>
+            <i class="bi bi-filetype-css tech-icon css-icon"></i>
+            <i class="bi bi-filetype-js tech-icon js-icon"></i>
+            <i class="bi bi-filetype-java tech-icon java-icon"></i>
+            <i class="bi bi-file-code tech-icon react-icon"></i>
+            <i class="bi bi-database tech-icon db-icon"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrapper">
+      <div class="col-a">
+        <header>
+          <h2>Sobre mim</h2>
+        </header>
+        <div class="content">
+          <p>
+            Me chamo Guilherme Cardoso, desenvolvedor web Full Stack e estudante de Sistemas de Informação pela
+            Universidade Feevale. Sou formado em Técnico em Informática para Internet pelo Senac São Leopoldo e tenho
+            interesse em desenvolvimento de sistemas, aplicações web e soluções digitais. Desenvolvo páginas e sistemas
+            web responsivos, priorizando organização do código, boa experiência do usuário e design moderno. Sou uma
+            pessoa dedicada, criativa e comprometida com o aprendizado contínuo, sempre buscando evoluir minhas
+            habilidades em programação e tecnologia. Meu objetivo é criar soluções eficientes que unam inovação,
+            funcionalidade e impacto real.
+          </p>
+        </div>
+      </div>
+      <div class="col-b">
+        <img src="./assets/images/eu.jpg" alt="Foto de Guilherme Cardoso"
+          style="width: 100%; max-width: 35rem; border-radius: 1rem; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);" />
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="wrapper">
+      <header>
+        <h2>Experiência Profissional</h2>
+      </header>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">2026 - Atual</span>
+            <h3>Estágio de TI</h3>
+            <h4><a href="https://www.sindimetalrs.org.br/" target="_blank" rel="noopener noreferrer">SINDIMETAL</a></h4>
+            <p>Atuação em suporte técnico, manutenção de equipamentos e apoio às rotinas de tecnologia da informação.
+            </p>
+            <div class="tech-tags">
+              <span class="tech-tag">Suporte Técnico</span>
+              <span class="tech-tag">Infraestrutura</span>
+              <span class="tech-tag">Automação</span>
+              <span class="tech-tag">TI</span>
+            </div>
           </div>
         </div>
 
-        <div class="col-b">
-          <div class="computer-wrapper">
-            <img src="./assets/images/computador.png" alt="Computador com códigos" class="computer-img" />
-            <div class="tech-icons-flying">
-              <i class="bi bi-filetype-html tech-icon html-icon"></i>
-              <i class="bi bi-filetype-css tech-icon css-icon"></i>
-              <i class="bi bi-filetype-js tech-icon js-icon"></i>
-              <i class="bi bi-filetype-java tech-icon java-icon"></i>
-              <i class="bi bi-file-code tech-icon react-icon"></i>
-              <i class="bi bi-database tech-icon db-icon"></i>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">2026 - Atual</span>
+            <h3>Sistemas de Informação</h3>
+            <h4><a href="https://www.feevale.br" target="_blank" rel="noopener noreferrer">Feevale</a></h4>
+            <p>Cursando graduação em Sistemas de Informação, com foco em desenvolvimento de software, análise de
+              sistemas e banco de dados.</p>
+            <div class="tech-tags">
+              <span class="tech-tag">Lógica de Programação</span>
+              <span class="tech-tag">Engenharia de Software</span>
+              <span class="tech-tag">Banco de Dados</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">2025 - 2026</span>
+            <h3>Operador de Sistemas</h3>
+            <h4><a href="https://www.wolfstore.com.br" target="_blank" rel="noopener noreferrer">Wolfstore</a></h4>
+            <p>Desenvolvimento e manutenção de sistemas web, otimização de processos e suporte técnico especializado.
+            </p>
+            <div class="tech-tags">
+              <span class="tech-tag">JavaScript</span>
+              <span class="tech-tag">Node.js</span>
+              <span class="tech-tag">MySQL</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">2023 - 2025</span>
+            <h3>Técnico em Informática para Internet</h3>
+            <h4><a href="https://www.senacrs.com.br" target="_blank" rel="noopener noreferrer">Senac São Leopoldo</a>
+            </h4>
+            <p>Formação técnica em desenvolvimento web, banco de dados e programação orientada a objetos.</p>
+            <div class="tech-tags">
+              <span class="tech-tag">HTML/CSS</span>
+              <span class="tech-tag">JavaScript</span>
+              <span class="tech-tag">MySQL</span>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="about">
-      <div class="wrapper">
-        <div class="col-a">
-          <header>
-            <h2>Sobre mim</h2>
-          </header>
-          <div class="content">
+  <section id="projects">
+    <div class="wrapper"></div>
+  </section>
+
+  <section id="knowledge">
+    <div class="wrapper">
+      <header>
+        <h2>Conhecimentos</h2>
+      </header>
+      <div class="content">
+        <div class="cards">
+          <div class="card">
+            <i class="bi bi-filetype-html" style="font-size: 5rem; color: #E34F26;"></i>
+
+            <h3>HTML5</h3>
             <p>
-              Me chamo Guilherme Cardoso, desenvolvedor web Full Stack e estudante de Sistemas de Informação pela Universidade Feevale. Sou formado em Técnico em Informática para Internet pelo Senac São Leopoldo e tenho interesse em desenvolvimento de sistemas, aplicações web e soluções digitais. Desenvolvo páginas e sistemas web responsivos, priorizando organização do código, boa experiência do usuário e design moderno. Sou uma pessoa dedicada, criativa e comprometida com o aprendizado contínuo, sempre buscando evoluir minhas habilidades em programação e tecnologia. Meu objetivo é criar soluções eficientes que unam inovação, funcionalidade e impacto real.
+              HTML5 é uma linguagem de marcação de hipertexto, que usamos para
+              marcar os elementos da página e construí-la.
+            </p>
+          </div>
+          <div class="card">
+            <i class="bi bi-filetype-css" style="font-size: 5rem; color: #1572B6;"></i>
+
+            <h3>CSS3</h3>
+            <p>
+              CSS3 é uma linguagem de estilo usada para descrever a
+              apresentação dos elementos da página os estilizando.
+            </p>
+          </div>
+          <div class="card">
+            <i class="bi bi-filetype-js" style="font-size: 5rem; color: #F7DF1E;"></i>
+
+            <h3>JavaScript</h3>
+            <p>
+              JavaScript é uma linguagem de programação interpretada usada no
+              desenvolvimento web para descrever funcionalidades e
+              comportamentos da página.
+            </p>
+          </div>
+          <div class="card">
+            <i class="bi bi-filetype-java" style="font-size: 5rem; color: #F89820;"></i>
+
+            <h3>Java</h3>
+            <p>
+              Java é uma linguagem de programação orientada a objetos,
+              muito utilizada no backend para construir APIs, sistemas
+              robustos e aplicações escaláveis.
+            </p>
+          </div>
+          <div class="card">
+            <i class="bi bi-file-code" style="font-size: 5rem; color: #61DAFB;"></i>
+
+            <h3>React</h3>
+            <p>
+              React é uma biblioteca JavaScript para construção de interfaces
+              de usuário interativas e componentes reutilizáveis.
+            </p>
+          </div>
+          <div class="card">
+            <i class="bi bi-server" style="font-size: 5rem; color: #339933;"></i>
+
+            <h3>Node.js</h3>
+            <p>
+              Node.js é um ambiente de execução JavaScript no servidor,
+              permitindo criar aplicações backend escaláveis e eficientes.
+            </p>
+          </div>
+          <div class="card">
+            <i class="bi bi-database" style="font-size: 5rem; color: #4479A1;"></i>
+
+            <h3>MySQL</h3>
+            <p>
+              MySQL é um sistema de gerenciamento de banco de dados relacional,
+              amplamente utilizado para armazenar e gerenciar dados.
+            </p>
+          </div>
+          <div class="card">
+            <i class="bi bi-filetype-php" style="font-size: 5rem; color: #777BB4;"></i>
+
+            <h3>PHP</h3>
+            <p>
+              PHP é uma linguagem de programação muito usada no backend para
+              construir sites dinâmicos, sistemas web e integrações com banco
+              de dados.
+            </p>
+          </div>
+          <div class="card">
+            <i class="bi bi-database-gear" style="font-size: 5rem; color: #336791;"></i>
+
+            <h3>PostgreSQL</h3>
+            <p>
+              PostgreSQL é um banco de dados relacional robusto, ideal para
+              aplicações que precisam de desempenho, confiabilidade e
+              consultas mais avançadas.
             </p>
           </div>
         </div>
-        <div class="col-b">
-          <img src="./assets/images/eu.jpg" alt="Foto de Guilherme Cardoso" style="width: 100%; max-width: 35rem; border-radius: 1rem; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);" />
-        </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="experience">
-      <div class="wrapper">
+  <section id="contact">
+    <div class="wrapper">
+      <div class="col-a">
         <header>
-          <h2>Experiência Profissional</h2>
-        </header>
-        <div class="timeline">
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-              <span class="timeline-date">2026 - Atual</span>
-              <h3>Estágio de TI</h3>
-              <h4 ><a href="https://www.sindimetalrs.org.br/" target="_blank" rel="noopener noreferrer">SINDIMETAL</a></h4>
-              <p>Atuação em suporte técnico, manutenção de equipamentos e apoio às rotinas de tecnologia da informação.</p>
-              <div class="tech-tags">
-                <span class="tech-tag">Suporte Técnico</span>
-                <span class="tech-tag">Infraestrutura</span>
-                <span class="tech-tag">Automação</span>
-                <span class="tech-tag">TI</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-              <span class="timeline-date">2026 - Atual</span>
-              <h3>Sistemas de Informação</h3>
-              <h4><a href="https://www.feevale.br" target="_blank" rel="noopener noreferrer">Feevale</a></h4>
-              <p>Cursando graduação em Sistemas de Informação, com foco em desenvolvimento de software, análise de sistemas e banco de dados.</p>
-              <div class="tech-tags">
-                <span class="tech-tag">Lógica de Programação</span>
-                <span class="tech-tag">Engenharia de Software</span>
-                <span class="tech-tag">Banco de Dados</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-              <span class="timeline-date">2025 - 2026</span>
-              <h3>Operador de Sistemas</h3>
-              <h4><a href="https://www.wolfstore.com.br" target="_blank" rel="noopener noreferrer">Wolfstore</a></h4>
-              <p>Desenvolvimento e manutenção de sistemas web, otimização de processos e suporte técnico especializado.</p>
-              <div class="tech-tags">
-                <span class="tech-tag">JavaScript</span>
-                <span class="tech-tag">Node.js</span>
-                <span class="tech-tag">MySQL</span>
-              </div>
-            </div>
-          </div>
-          
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-              <span class="timeline-date">2023 - 2025</span>
-              <h3>Técnico em Informática para Internet</h3>
-              <h4><a href="https://www.senacrs.com.br" target="_blank" rel="noopener noreferrer">Senac São Leopoldo</a></h4>
-              <p>Formação técnica em desenvolvimento web, banco de dados e programação orientada a objetos.</p>
-              <div class="tech-tags">
-                <span class="tech-tag">HTML/CSS</span>
-                <span class="tech-tag">JavaScript</span>
-                <span class="tech-tag">MySQL</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="projects">
-      <div class="wrapper"></div>
-    </section>
-
-    <section id="knowledge">
-      <div class="wrapper">
-        <header>
-          <h2>Conhecimentos</h2>
+          <h2>Fale comigo!</h2>
         </header>
         <div class="content">
-          <div class="cards">
-            <div class="card">
-              <i class="bi bi-filetype-html" style="font-size: 5rem; color: #E34F26;"></i>
-
-              <h3>HTML5</h3>
-              <p>
-                HTML5 é uma linguagem de marcação de hipertexto, que usamos para
-                marcar os elementos da página e construí-la.
-              </p>
-            </div>
-            <div class="card">
-              <i class="bi bi-filetype-css" style="font-size: 5rem; color: #1572B6;"></i>
-
-              <h3>CSS3</h3>
-              <p>
-                CSS3 é uma linguagem de estilo usada para descrever a
-                apresentação dos elementos da página os estilizando.
-              </p>
-            </div>
-            <div class="card">
-              <i class="bi bi-filetype-js" style="font-size: 5rem; color: #F7DF1E;"></i>
-
-              <h3>JavaScript</h3>
-              <p>
-                JavaScript é uma linguagem de programação interpretada usada no
-                desenvolvimento web para descrever funcionalidades e
-                comportamentos da página.
-              </p>
-            </div>
-            <div class="card">
-              <i class="bi bi-filetype-java" style="font-size: 5rem; color: #F89820;"></i>
-
-              <h3>Java</h3>
-              <p>
-                Java é uma linguagem de programação orientada a objetos,
-                muito utilizada no backend para construir APIs, sistemas
-                robustos e aplicações escaláveis.
-              </p>
-            </div>
-            <div class="card">
-              <i class="bi bi-file-code" style="font-size: 5rem; color: #61DAFB;"></i>
-
-              <h3>React</h3>
-              <p>
-                React é uma biblioteca JavaScript para construção de interfaces
-                de usuário interativas e componentes reutilizáveis.
-              </p>
-            </div>
-            <div class="card">
-              <i class="bi bi-server" style="font-size: 5rem; color: #339933;"></i>
-
-              <h3>Node.js</h3>
-              <p>
-                Node.js é um ambiente de execução JavaScript no servidor,
-                permitindo criar aplicações backend escaláveis e eficientes.
-              </p>
-            </div>
-            <div class="card">
-              <i class="bi bi-database" style="font-size: 5rem; color: #4479A1;"></i>
-
-              <h3>MySQL</h3>
-              <p>
-                MySQL é um sistema de gerenciamento de banco de dados relacional,
-                amplamente utilizado para armazenar e gerenciar dados.
-              </p>
-            </div>
-            <div class="card">
-              <i class="bi bi-filetype-php" style="font-size: 5rem; color: #777BB4;"></i>
-
-              <h3>PHP</h3>
-              <p>
-                PHP é uma linguagem de programação muito usada no backend para
-                construir sites dinâmicos, sistemas web e integrações com banco
-                de dados.
-              </p>
-            </div>
-            <div class="card">
-              <i class="bi bi-database-gear" style="font-size: 5rem; color: #336791;"></i>
-
-              <h3>PostgreSQL</h3>
-              <p>
-                PostgreSQL é um banco de dados relacional robusto, ideal para
-                aplicações que precisam de desempenho, confiabilidade e
-                consultas mais avançadas.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact">
-      <div class="wrapper">
-        <div class="col-a">
-          <header>
-            <h2>Fale comigo!</h2>
-          </header>
-          <div class="content">
-            <ul>
-              <li>
-                <a href="mailto:guilhermecardoso0404@gmail.com" title="Enviar e-mail">
-                  <i class="bi bi-envelope" style="font-size: 1.5rem;"></i>
-                  guilhermecardoso0404@gmail.com
-                </a>
-              </li>
-              <li>
-                <a href="tel:+5551991603189" title="Fazer ligação">
-                  <i class="bi bi-telephone" style="font-size: 1.5rem;"></i>
-                  +55 51 99160-3189
-                </a>
-              </li>
-            </ul>
-
-            <a
-              class="button"
-              title="Me chama no zap!"
-              href="https://api.whatsapp.com/send?phone=5551991603189&text=Olá,%20Guilherme!%20Vim%20do%20seu%20portfólio,%20quero%20trabalhar%20contigo!"
-              target="_blank"
-            >
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M16.6 14.0001C16.4 13.9001 15.1 13.3001 14.9 13.2001C14.7 13.1001 14.5 13.1001 14.3 13.3001C14.1 13.5001 13.7 14.1001 13.5 14.3001C13.4 14.5001 13.2 14.5001 13 14.4001C12.3 14.1001 11.6 13.7001 11 13.2001C10.5 12.7001 10 12.1001 9.6 11.5001C9.5 11.3001 9.6 11.1001 9.7 11.0001C9.8 10.9001 9.9 10.7001 10.1 10.6001C10.2 10.5001 10.3 10.3001 10.3 10.2001C10.4 10.1001 10.4 9.9001 10.3 9.8001C10.2 9.7001 9.7 8.5001 9.5 8.0001C9.4 7.3001 9.2 7.3001 9 7.3001C8.9 7.3001 8.7 7.3001 8.5 7.3001C8.3 7.3001 8 7.5001 7.9 7.6001C7.3 8.2001 7 8.9001 7 9.7001C7.1 10.6001 7.4 11.5001 8 12.3001C9.1 13.9001 10.5 15.2001 12.2 16.0001C12.7 16.2001 13.1 16.4001 13.6 16.5001C14.1 16.7001 14.6 16.7001 15.2 16.6001C15.9 16.5001 16.5 16.0001 16.9 15.4001C17.1 15.0001 17.1 14.6001 17 14.2001C17 14.2001 16.8 14.1001 16.6 14.0001ZM19.1 4.9001C15.2 1.0001 8.9 1.0001 5 4.9001C1.8 8.1001 1.2 13.0001 3.4 16.9001L2 22.0001L7.3 20.6001C8.8 21.4001 10.4 21.8001 12 21.8001C17.5 21.8001 21.9 17.4001 21.9 11.9001C22 9.3001 20.9 6.8001 19.1 4.9001ZM16.4 18.9001C15.1 19.7001 13.6 20.2001 12 20.2001C10.5 20.2001 9.1 19.8001 7.8 19.1001L7.5 18.9001L4.4 19.7001L5.2 16.7001L5 16.4001C2.6 12.4001 3.8 7.4001 7.7 4.9001C11.6 2.4001 16.6 3.7001 19 7.5001C21.4 11.4001 20.3 16.5001 16.4 18.9001Z"
-                  fill="white"
-                />
-              </svg>
-              WhatsApp
-            </a>
-          </div>
-        </div>
-
-        <div class="col-b">
-          <img src="./assets/images/celular.png" alt="Ãcone de celular." style="width: 30rem; animation: flutuar 2.5s infinite backwards;" />
-        </div>
-      </div>
-    </section>
-
-    <a id="backToTopButton" title="Voltar ao topo" href="#home">
-      <svg
-        width="40"
-        height="40"
-        viewBox="0 0 40 40"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <circle cx="20" cy="20" r="20" fill="#00856F" />
-        <path
-          d="M20 27V13"
-          stroke="white"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        />
-        <path
-          d="M13 20L20 13L27 20"
-          stroke="white"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        />
-      </svg>
-    </a>
-
-    <footer>
-      <div class="wrapper">
-        <div class="col-a">
-          <a class="logo" href="#home"> Guilherme Cardoso </a>
-
-          <p>
-            ©2025 por Guilherme Cardoso. <br />
-            Todos os direitos reservados.
-          </p>
-        </div>
-
-        <div class="col-b">
-          <ul class="social-links">
+          <ul>
             <li>
-              <a
-                href="https://www.instagram.com/guilhermecardoso____/"
-                title="Instagram"
-                target="_blank"
-                ><svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M17 1.99997H7C4.23858 1.99997 2 4.23855 2 6.99997V17C2 19.7614 4.23858 22 7 22H17C19.7614 22 22 19.7614 22 17V6.99997C22 4.23855 19.7614 1.99997 17 1.99997Z"
-                    stroke="#FFFAF1"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M15.9997 11.3701C16.1231 12.2023 15.981 13.0523 15.5935 13.7991C15.206 14.5459 14.5929 15.1515 13.8413 15.5297C13.0898 15.908 12.2382 16.0397 11.4075 15.906C10.5768 15.7723 9.80947 15.3801 9.21455 14.7852C8.61962 14.1903 8.22744 13.4229 8.09377 12.5923C7.96011 11.7616 8.09177 10.91 8.47003 10.1584C8.84829 9.40691 9.45389 8.7938 10.2007 8.4063C10.9475 8.0188 11.7975 7.87665 12.6297 8.00006C13.4786 8.12594 14.2646 8.52152 14.8714 9.12836C15.4782 9.73521 15.8738 10.5211 15.9997 11.3701Z"
-                    stroke="#FFFAF1"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M17.5 6.49997H17.51"
-                    stroke="#FFFAF1"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
+              <a href="mailto:guilhermecardoso0404@gmail.com" title="Enviar e-mail">
+                <i class="bi bi-envelope" style="font-size: 1.5rem;"></i>
+                guilhermecardoso0404@gmail.com
               </a>
             </li>
             <li>
-              <a
-                href="https://github.com/guicardoso0404"
-                title="Github"
-                target="_blank"
-                ><svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  width="24"
-                  height="24"
-                >
-                  <path fill="none" d="M0 0h24v24H0z" />
-                  <path
-                    d="M12 2C6.475 2 2 6.475 2 12a9.994 9.994 0 0 0 6.838 9.488c.5.087.687-.213.687-.476 0-.237-.013-1.024-.013-1.862-2.512.463-3.162-.612-3.362-1.175-.113-.288-.6-1.175-1.025-1.413-.35-.187-.85-.65-.013-.662.788-.013 1.35.725 1.538 1.025.9 1.512 2.338 1.087 2.912.825.088-.65.35-1.087.638-1.337-2.225-.25-4.55-1.113-4.55-4.938 0-1.088.387-1.987 1.025-2.688-.1-.25-.45-1.275.1-2.65 0 0 .837-.262 2.75 1.026a9.28 9.28 0 0 1 2.5-.338c.85 0 1.7.112 2.5.337 1.912-1.3 2.75-1.024 2.75-1.024.55 1.375.2 2.4.1 2.65.637.7 1.025 1.587 1.025 2.687 0 3.838-2.337 4.688-4.562 4.938.362.312.675.912.675 1.85 0 1.337-.013 2.412-.013 2.75 0 .262.188.574.688.474A10.016 10.016 0 0 0 22 12c0-5.525-4.475-10-10-10z"
-                    fill="rgba(255,255,255,1)"
-                  />
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.linkedin.com/in/guilherme-cardoso-39429328a/"
-                title="LinkedIn"
-                target="_blank"
-                ><svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  width="24"
-                  height="24"
-                >
-                  <path fill="none" d="M0 0h24v24H0z" />
-                  <path
-                    d="M6.94 5a2 2 0 1 1-4-.002 2 2 0 0 1 4 .002zM7 8.48H3V21h4V8.48zm6.32 0H9.34V21h3.94v-6.57c0-3.66 4.77-4 4.77 0V21H22v-7.93c0-6.17-7.06-5.94-8.72-2.91l.04-1.68z"
-                    fill="rgba(255,255,255,1)"
-                  />
-                </svg>
-              </a>
-            </li>
-            <li style="display:none;">
-              <a
-                href="#"
-                title="Twitter"
-                target="_blank"
-                ><svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  width="24"
-                  height="24"
-                >
-                  <path fill="none" d="M0 0h24v24H0z" />
-                  <path
-                    d="M22.162 5.656a8.384 8.384 0 0 1-2.402.658A4.196 4.196 0 0 0 21.6 4c-.82.488-1.719.83-2.656 1.015a4.182 4.182 0 0 0-7.126 3.814 11.874 11.874 0 0 1-8.62-4.37 4.168 4.168 0 0 0-.566 2.103c0 1.45.738 2.731 1.86 3.481a4.168 4.168 0 0 1-1.894-.523v.052a4.185 4.185 0 0 0 3.355 4.101 4.21 4.21 0 0 1-1.89.072A4.185 4.185 0 0 0 7.97 16.65a8.394 8.394 0 0 1-6.191 1.732 11.83 11.83 0 0 0 6.41 1.88c7.693 0 11.9-6.373 11.9-11.9 0-.18-.005-.362-.013-.54a8.496 8.496 0 0 0 2.087-2.165z"
-                    fill="rgba(255,255,255,1)"
-                  />
-                </svg>
+              <a href="tel:+5551991603189" title="Fazer ligação">
+                <i class="bi bi-telephone" style="font-size: 1.5rem;"></i>
+                +55 51 99160-3189
               </a>
             </li>
           </ul>
+          <a  class="button curriculo-button" href="./assets/Curriculo/Curriculo.pdf" target="_blank" rel="noopener noreferrer">
+            <i class="bi bi-file-earmark-person"></i>
+            Currículo
+          </a>
+          <a class="button" title="Me chama no zap!"
+            href="https://api.whatsapp.com/send?phone=5551991603189&text=Olá,%20Guilherme!%20Vim%20do%20seu%20portfólio,%20quero%20trabalhar%20contigo!"
+            target="_blank">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M16.6 14.0001C16.4 13.9001 15.1 13.3001 14.9 13.2001C14.7 13.1001 14.5 13.1001 14.3 13.3001C14.1 13.5001 13.7 14.1001 13.5 14.3001C13.4 14.5001 13.2 14.5001 13 14.4001C12.3 14.1001 11.6 13.7001 11 13.2001C10.5 12.7001 10 12.1001 9.6 11.5001C9.5 11.3001 9.6 11.1001 9.7 11.0001C9.8 10.9001 9.9 10.7001 10.1 10.6001C10.2 10.5001 10.3 10.3001 10.3 10.2001C10.4 10.1001 10.4 9.9001 10.3 9.8001C10.2 9.7001 9.7 8.5001 9.5 8.0001C9.4 7.3001 9.2 7.3001 9 7.3001C8.9 7.3001 8.7 7.3001 8.5 7.3001C8.3 7.3001 8 7.5001 7.9 7.6001C7.3 8.2001 7 8.9001 7 9.7001C7.1 10.6001 7.4 11.5001 8 12.3001C9.1 13.9001 10.5 15.2001 12.2 16.0001C12.7 16.2001 13.1 16.4001 13.6 16.5001C14.1 16.7001 14.6 16.7001 15.2 16.6001C15.9 16.5001 16.5 16.0001 16.9 15.4001C17.1 15.0001 17.1 14.6001 17 14.2001C17 14.2001 16.8 14.1001 16.6 14.0001ZM19.1 4.9001C15.2 1.0001 8.9 1.0001 5 4.9001C1.8 8.1001 1.2 13.0001 3.4 16.9001L2 22.0001L7.3 20.6001C8.8 21.4001 10.4 21.8001 12 21.8001C17.5 21.8001 21.9 17.4001 21.9 11.9001C22 9.3001 20.9 6.8001 19.1 4.9001ZM16.4 18.9001C15.1 19.7001 13.6 20.2001 12 20.2001C10.5 20.2001 9.1 19.8001 7.8 19.1001L7.5 18.9001L4.4 19.7001L5.2 16.7001L5 16.4001C2.6 12.4001 3.8 7.4001 7.7 4.9001C11.6 2.4001 16.6 3.7001 19 7.5001C21.4 11.4001 20.3 16.5001 16.4 18.9001Z"
+                fill="white" />
+            </svg>
+            WhatsApp
+          </a>
         </div>
       </div>
-    </footer>
 
-    <div id="toggle">
-      <input type="checkbox" id="sw-checkbox" />
-      <label for="sw-checkbox" title="Mudar tema">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-          width="20"
-          height="20"
-        >
-          <path fill="none" d="M0 0h24v24H0z" />
-          <path
-            d="M11.38 2.019a7.5 7.5 0 1 0 10.6 10.6C21.662 17.854 17.316 22 12.001 22 6.477 22 2 17.523 2 12c0-5.315 4.146-9.661 9.38-9.981z"
-          />
-        </svg>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-          width="20"
-          height="20"
-        >
-          <path fill="none" d="M0 0h24v24H0z" />
-          <path
-            d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"
-            fill="rgba(255,255,255,1)"
-          />
-        </svg>
-      </label>
+      <div class="col-b">
+        <img src="./assets/images/celular.png" alt="Ãcone de celular."
+          style="width: 30rem; animation: flutuar 2.5s infinite backwards;" />
+      </div>
     </div>
-  </body>
-</html>
+  </section>
 
+  <a id="backToTopButton" title="Voltar ao topo" href="#home">
+    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="20" cy="20" r="20" fill="#00856F" />
+      <path d="M20 27V13" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M13 20L20 13L27 20" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+  </a>
+
+  <footer>
+    <div class="wrapper">
+      <div class="col-a">
+        <a class="logo" href="#home"> Guilherme Cardoso </a>
+
+        <p>
+          ©2025 por Guilherme Cardoso. <br />
+          Todos os direitos reservados.
+        </p>
+      </div>
+
+      <div class="col-b">
+        <ul class="social-links">
+          <li>
+            <a href="https://www.instagram.com/guilhermecardoso____/" title="Instagram" target="_blank"><svg width="24"
+                height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M17 1.99997H7C4.23858 1.99997 2 4.23855 2 6.99997V17C2 19.7614 4.23858 22 7 22H17C19.7614 22 22 19.7614 22 17V6.99997C22 4.23855 19.7614 1.99997 17 1.99997Z"
+                  stroke="#FFFAF1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path
+                  d="M15.9997 11.3701C16.1231 12.2023 15.981 13.0523 15.5935 13.7991C15.206 14.5459 14.5929 15.1515 13.8413 15.5297C13.0898 15.908 12.2382 16.0397 11.4075 15.906C10.5768 15.7723 9.80947 15.3801 9.21455 14.7852C8.61962 14.1903 8.22744 13.4229 8.09377 12.5923C7.96011 11.7616 8.09177 10.91 8.47003 10.1584C8.84829 9.40691 9.45389 8.7938 10.2007 8.4063C10.9475 8.0188 11.7975 7.87665 12.6297 8.00006C13.4786 8.12594 14.2646 8.52152 14.8714 9.12836C15.4782 9.73521 15.8738 10.5211 15.9997 11.3701Z"
+                  stroke="#FFFAF1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M17.5 6.49997H17.51" stroke="#FFFAF1" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/guicardoso0404" title="Github" target="_blank"><svg
+                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                <path fill="none" d="M0 0h24v24H0z" />
+                <path
+                  d="M12 2C6.475 2 2 6.475 2 12a9.994 9.994 0 0 0 6.838 9.488c.5.087.687-.213.687-.476 0-.237-.013-1.024-.013-1.862-2.512.463-3.162-.612-3.362-1.175-.113-.288-.6-1.175-1.025-1.413-.35-.187-.85-.65-.013-.662.788-.013 1.35.725 1.538 1.025.9 1.512 2.338 1.087 2.912.825.088-.65.35-1.087.638-1.337-2.225-.25-4.55-1.113-4.55-4.938 0-1.088.387-1.987 1.025-2.688-.1-.25-.45-1.275.1-2.65 0 0 .837-.262 2.75 1.026a9.28 9.28 0 0 1 2.5-.338c.85 0 1.7.112 2.5.337 1.912-1.3 2.75-1.024 2.75-1.024.55 1.375.2 2.4.1 2.65.637.7 1.025 1.587 1.025 2.687 0 3.838-2.337 4.688-4.562 4.938.362.312.675.912.675 1.85 0 1.337-.013 2.412-.013 2.75 0 .262.188.574.688.474A10.016 10.016 0 0 0 22 12c0-5.525-4.475-10-10-10z"
+                  fill="rgba(255,255,255,1)" />
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/guilherme-cardoso-39429328a/" title="LinkedIn" target="_blank"><svg
+                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                <path fill="none" d="M0 0h24v24H0z" />
+                <path
+                  d="M6.94 5a2 2 0 1 1-4-.002 2 2 0 0 1 4 .002zM7 8.48H3V21h4V8.48zm6.32 0H9.34V21h3.94v-6.57c0-3.66 4.77-4 4.77 0V21H22v-7.93c0-6.17-7.06-5.94-8.72-2.91l.04-1.68z"
+                  fill="rgba(255,255,255,1)" />
+              </svg>
+            </a>
+          </li>
+          <li style="display:none;">
+            <a href="#" title="Twitter" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                width="24" height="24">
+                <path fill="none" d="M0 0h24v24H0z" />
+                <path
+                  d="M22.162 5.656a8.384 8.384 0 0 1-2.402.658A4.196 4.196 0 0 0 21.6 4c-.82.488-1.719.83-2.656 1.015a4.182 4.182 0 0 0-7.126 3.814 11.874 11.874 0 0 1-8.62-4.37 4.168 4.168 0 0 0-.566 2.103c0 1.45.738 2.731 1.86 3.481a4.168 4.168 0 0 1-1.894-.523v.052a4.185 4.185 0 0 0 3.355 4.101 4.21 4.21 0 0 1-1.89.072A4.185 4.185 0 0 0 7.97 16.65a8.394 8.394 0 0 1-6.191 1.732 11.83 11.83 0 0 0 6.41 1.88c7.693 0 11.9-6.373 11.9-11.9 0-.18-.005-.362-.013-.54a8.496 8.496 0 0 0 2.087-2.165z"
+                  fill="rgba(255,255,255,1)" />
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <div id="toggle">
+    <input type="checkbox" id="sw-checkbox" />
+    <label for="sw-checkbox" title="Mudar tema">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20">
+        <path fill="none" d="M0 0h24v24H0z" />
+        <path
+          d="M11.38 2.019a7.5 7.5 0 1 0 10.6 10.6C21.662 17.854 17.316 22 12.001 22 6.477 22 2 17.523 2 12c0-5.315 4.146-9.661 9.38-9.981z" />
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20">
+        <path fill="none" d="M0 0h24v24H0z" />
+        <path
+          d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"
+          fill="rgba(255,255,255,1)" />
+      </svg>
+    </label>
+  </div>
+</body>
+
+</html>

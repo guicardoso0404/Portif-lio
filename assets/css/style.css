@@ -1226,6 +1226,22 @@ body.menu-expanded button path {
   animation: flutuar 2.5s infinite backwards;
 }
 
+#contact .curriculo-button {
+  width: 17.5rem;
+  height: 5.6rem;
+  margin-bottom: 1.2rem;
+}
+
+#contact .curriculo-button i {
+  font-size: 2rem;
+  color: var(--primary-color);
+  transition: 400ms;
+}
+
+#contact .curriculo-button:hover i {
+  color: #fff;
+}
+
 /*===== FOOTER ===============================================*/
 
 footer {
